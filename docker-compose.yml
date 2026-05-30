@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: scada
+      POSTGRES_PASSWORD: scada
+      POSTGRES_DB: scada
+    ports:
+      - "5432:5432"
+    volumes:
+      - scada_pg:/var/lib/postgresql/data
+  node-red:
+    image: nodered/node-red:4.0
+    ports:
+      - "1880:1880"
+    volumes:
+      - node_red_data:/data
+volumes:
+  scada_pg:
+  node_red_data:

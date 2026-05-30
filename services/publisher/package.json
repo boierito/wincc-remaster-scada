@@ -1,0 +1,16 @@
+{
+  "name": "@scada/publisher",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "publish:demo": "tsx src/publish.ts 10000000-0000-0000-0000-000000000001"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "pg": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.2"
+  }
+}

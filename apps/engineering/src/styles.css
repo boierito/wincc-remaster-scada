@@ -1,0 +1,175 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, Segoe UI, Arial, sans-serif;
+  color: #dbe7ef;
+  background: #0c1117;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #314154;
+  background: #172232;
+  color: #e5edf5;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr);
+}
+
+.sidebar {
+  border-right: 1px solid #243244;
+  background: #111923;
+  padding: 16px;
+  overflow: auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.sidebar-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.quick-create {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.quick-create button {
+  justify-content: center;
+  padding: 7px 6px;
+  font-size: 12px;
+}
+
+.tree-node {
+  margin-left: 12px;
+}
+
+.tree-label {
+  padding: 5px 8px;
+  border-radius: 5px;
+  color: #b8c7d6;
+  font-size: 13px;
+}
+
+.kind-folder { color: #7dd3fc; }
+.kind-project { color: #f8fafc; font-weight: 700; }
+.kind-tag { color: #86efac; }
+.kind-screen { color: #facc15; }
+
+.workspace {
+  min-width: 0;
+  padding: 18px;
+  overflow: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+h1, h2, p { margin: 0; }
+h1 { font-size: 24px; }
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+p { color: #8ea0b3; margin-top: 4px; }
+.status {
+  color: #99f6e4;
+  border: 1px solid #1f4f55;
+  background: #102a31;
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  max-width: 420px;
+}
+
+.dock {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(360px, .8fr);
+  gap: 14px;
+}
+
+.panel {
+  border: 1px solid #263548;
+  background: #111a25;
+  border-radius: 8px;
+  padding: 12px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.panel.wide { grid-column: span 1; }
+
+.grid {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.grid th, .grid td {
+  border-bottom: 1px solid #243244;
+  padding: 7px 8px;
+  text-align: left;
+  max-width: 210px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.grid th {
+  color: #93c5fd;
+  font-weight: 650;
+  background: #162131;
+}
+
+.designer {
+  display: grid;
+  gap: 10px;
+}
+
+.toolstrip {
+  display: flex;
+  gap: 8px;
+}
+
+.canvas-stage {
+  border: 1px solid #334155;
+  background: #0b1220;
+  border-radius: 6px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 1050px) {
+  .app-shell { grid-template-columns: 1fr; }
+  .sidebar { max-height: 320px; border-right: 0; border-bottom: 1px solid #243244; }
+  .dock { grid-template-columns: 1fr; }
+}

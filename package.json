@@ -1,0 +1,40 @@
+{
+  "name": "wincc-remaster-scada",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Clean-room web SCADA platform with WinCC V7.5-style engineering workflows.",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:api dev:acquisition dev:engineering dev:runtime",
+    "dev:api": "npm --workspace services/api run dev",
+    "dev:acquisition": "npm --workspace services/acquisition run dev",
+    "dev:engineering": "npm --workspace apps/engineering run dev",
+    "dev:runtime": "npm --workspace apps/runtime run dev",
+    "build": "npm run build:packages && npm run build:services && npm run build:apps",
+    "build:packages": "npm --workspace @scada/domain run build && npm --workspace @scada/db run build && npm --workspace @scada/node-red run build",
+    "build:services": "npm --workspace @scada/api run build && npm --workspace @scada/acquisition run build && npm --workspace @scada/publisher run build",
+    "build:apps": "npm --workspace @scada/engineering run build && npm --workspace @scada/runtime run build",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "lint": "eslint .",
+    "db:migrate": "npm --workspace services/api run db:migrate",
+    "db:seed": "npm --workspace services/api run db:seed",
+    "publish:demo": "npm --workspace services/publisher run publish:demo"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.24",
+    "@typescript-eslint/eslint-plugin": "^8.33.0",
+    "@typescript-eslint/parser": "^8.33.0",
+    "eslint": "^9.27.0",
+    "npm-run-all": "^4.1.5",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
+  }
+}

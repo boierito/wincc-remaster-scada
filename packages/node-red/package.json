@@ -1,0 +1,17 @@
+{
+  "name": "@scada/node-red",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@scada/domain": "0.1.0"
+  },
+  "devDependencies": {
+    "vitest": "^3.1.4"
+  }
+}

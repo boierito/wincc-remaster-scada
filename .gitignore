@@ -1,0 +1,9 @@
+node_modules/
+dist/
+coverage/
+published/
+.env
+.env.local
+*.log
+playwright-report/
+test-results/

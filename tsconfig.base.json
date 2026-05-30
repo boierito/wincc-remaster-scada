@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@scada/domain": ["packages/domain/src/index.ts"],
+      "@scada/db": ["packages/db/src/index.ts"],
+      "@scada/node-red": ["packages/node-red/src/index.ts"]
+    }
+  }
+}
