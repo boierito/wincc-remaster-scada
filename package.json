@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "Clean-room web SCADA platform with WinCC V7.5-style engineering workflows.",
+  "license": "MIT",
   "type": "module",
   "workspaces": [
     "apps/*",

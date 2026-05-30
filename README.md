@@ -81,3 +81,7 @@ This is an actively growing implementation. The current milestone provides real 
 - [Milestones](docs/milestones.md)
 - [Parity Matrix](docs/parity-matrix.md)
 - [User Guide](docs/user-guide.md)
+
+## License
+
+MIT. See [LICENSE](LICENSE).
